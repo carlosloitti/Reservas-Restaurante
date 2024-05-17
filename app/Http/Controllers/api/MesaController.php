@@ -71,6 +71,6 @@ class MesaController extends Controller
         ->select('mesas.*')
         ->get();
     
-        return json_encode(['mesas' => $mesa]);
+        return json_encode(['mesas' => $mesa, 'success' => true]);
     }
 }

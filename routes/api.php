@@ -3,6 +3,7 @@
 use App\Http\Controllers\api\ClienteController;
 use App\Http\Controllers\api\MenuController;
 use App\Http\Controllers\api\MesaController;
+use App\Http\Controllers\api\ReservaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,11 @@ Route::get('/mesas/create' , [MesaController::class, 'create'])->name('mesas');
 Route::delete('/mesas/{mesa}' , [MesaController::class, 'destroy'])->name('mesas');
 Route::put('/mesas/{mesa}' , [MesaController::class, 'update'])->name('mesas');
 Route::get('/mesas/{mesa}/edit' , [MesaController::class, 'edit'])->name('mesas');
+
+
+Route::get('/reservas' , [ReservaController::class, 'index'])->name('reservas');
+Route::post('/reservas' , [MesaController::class, 'store'])->name('reservas');
+Route::get('/reservas/create' , [MesaController::class, 'create'])->name('reservas');
+Route::delete('/reservas/{reserva}' , [MesaController::class, 'destroy'])->name('reservas');
+Route::put('/reservas/{reserva}' , [MesaController::class, 'update'])->name('reservas');
+Route::get('/reservas/{reserva}/edit' , [MesaController::class, 'edit'])->name('reservas');
