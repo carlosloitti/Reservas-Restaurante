@@ -74,7 +74,7 @@ class ClienteController extends Controller
         ->select('clientes.*')
         ->get();
     
-        return json_encode(['clientes' => $clientes]);
+        return json_encode(['clientes' => $clientes, 'success' => true]);
 
     }
 }
